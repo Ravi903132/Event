@@ -134,11 +134,11 @@ def update_category_view(request,pk):
   
   
 
-def admin_policy_view(request):
-    return render(request,'event/admin_policy.html')
+def admin_event_view(request):
+    return render(request,'event/admin_event.html')
 
 
-def admin_add_policy_view(request):
+def admin_add_event_view(request):
     policyForm=forms.PolicyForm() 
     
     if request.method=='POST':
@@ -150,21 +150,21 @@ def admin_add_policy_view(request):
             policy = policyForm.save(commit=False)
             policy.category=category
             policy.save()
-            return redirect('admin-view-policy')
-    return render(request,'event/admin_add_policy.html',{'policyForm':policyForm})
+            return redirect('admin-view-event')
+    return render(request,'event/admin_add_event.html',{'policyForm':policyForm})
 
-def admin_view_policy_view(request):
+def admin_view_event_view(request):
     policies = models.Policy.objects.all()
-    return render(request,'event/admin_view_policy.html',{'policies':policies})
+    return render(request,'event/admin_view_event.html',{'policies':policies})
 
 
 
-def admin_update_policy_view(request):
+def admin_update_event_view(request):
     policies = models.Policy.objects.all()
-    return render(request,'event/admin_update_policy.html',{'policies':policies})
+    return render(request,'event/admin_update_event.html',{'policies':policies})
 
 @login_required(login_url='adminlogin')
-def update_policy_view(request,pk):
+def update_event_view(request,pk):
     policy = models.Policy.objects.get(id=pk)
     policyForm=forms.PolicyForm(instance=policy)
     
@@ -180,46 +180,46 @@ def update_policy_view(request,pk):
             policy.category=category
             policy.save()
            
-            return redirect('admin-update-policy')
-    return render(request,'event/update_policy.html',{'policyForm':policyForm})
+            return redirect('admin-update-event')
+    return render(request,'event/update_event.html',{'policyForm':policyForm})
   
   
-def admin_delete_policy_view(request):
+def admin_delete_event_view(request):
     policies = models.Policy.objects.all()
-    return render(request,'event/admin_delete_policy.html',{'policies':policies})
+    return render(request,'event/admin_delete_event.html',{'policies':policies})
     
-def delete_policy_view(request,pk):
+def delete_event_view(request,pk):
     policy = models.Policy.objects.get(id=pk)
     policy.delete()
-    return redirect('admin-delete-policy')
+    return redirect('admin-delete-event')
 
-def admin_view_policy_holder_view(request):
+def admin_view_event_holder_view(request):
     policyrecords = models.PolicyRecord.objects.all()
-    return render(request,'event/admin_view_policy_holder.html',{'policyrecords':policyrecords})
+    return render(request,'event/admin_view_event_holder.html',{'policyrecords':policyrecords})
 
-def admin_view_approved_policy_holder_view(request):
+def admin_view_approved_event_holder_view(request):
     policyrecords = models.PolicyRecord.objects.all().filter(status='Approved')
-    return render(request,'event/admin_view_approved_policy_holder.html',{'policyrecords':policyrecords})
+    return render(request,'event/admin_view_approved_event_holder.html',{'policyrecords':policyrecords})
 
-def admin_view_disapproved_policy_holder_view(request):
+def admin_view_disapproved_event_holder_view(request):
     policyrecords = models.PolicyRecord.objects.all().filter(status='Disapproved')
-    return render(request,'event/admin_view_disapproved_policy_holder.html',{'policyrecords':policyrecords})
+    return render(request,'event/admin_view_disapproved_event_holder.html',{'policyrecords':policyrecords})
 
-def admin_view_waiting_policy_holder_view(request):
+def admin_view_waiting_event_holder_view(request):
     policyrecords = models.PolicyRecord.objects.all().filter(status='Pending')
-    return render(request,'event/admin_view_waiting_policy_holder.html',{'policyrecords':policyrecords})
+    return render(request,'event/admin_view_waiting_event_holder.html',{'policyrecords':policyrecords})
 
 def approve_request_view(request,pk):
     policyrecords = models.PolicyRecord.objects.get(id=pk)
     policyrecords.status='Approved'
     policyrecords.save()
-    return redirect('admin-view-policy-holder')
+    return redirect('admin-view-event-holder')
 
 def disapprove_request_view(request,pk):
     policyrecords = models.PolicyRecord.objects.get(id=pk)
     policyrecords.status='Disapproved'
     policyrecords.save()
-    return redirect('admin-view-policy-holder')
+    return redirect('admin-view-event-holder')
 
 
 def admin_question_view(request):

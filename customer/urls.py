@@ -8,7 +8,7 @@ urlpatterns = [
     path('customer-dashboard', views.customer_dashboard_view,name='customer-dashboard'),
     path('customerlogin', LoginView.as_view(template_name='event/adminlogin.html'),name='customerlogin'),
 
-    path('apply-policy', views.apply_policy_view,name='apply-policy'),
+    path('apply-event', views.apply_event_view,name='apply-event'),
     path('apply/<int:pk>', views.apply_view,name='apply'),
     path('history', views.history_view,name='history'),
 

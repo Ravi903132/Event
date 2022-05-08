@@ -74,9 +74,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"> <a href="apply-policy" style="text-decoration: none;color:black;">Available Event</a> </h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"> <a href="apply-event" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Available Event</p></a> </h6>
             <h2 class="text-right"><i  class="fab fa-product-hunt f-left"></i><span>{{available_policy}}</span></h2>
             
           </div>
@@ -84,9 +86,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="history" style="text-decoration: none;color:black;">Applied Event</a> </h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="history" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Applied Event</p></a> </h6>
             <h2 class="text-right"><i class="fab fa-product-hunt f-left"></i><span>{{applied_policy}}</span></h2>
             
           </div>
@@ -94,9 +98,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="/" style="text-decoration: none;color:black;">Event Categories</a></h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="/" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Event Categories</p></a></h6>
            <h2 class="text-right"><i class="fas fa-list-alt f-left"></i><span>{{total_category}}</span></h2>
             
           </div>
@@ -104,9 +110,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="question-history" style="text-decoration: none;color:black;">Total Question Asked</a></h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="question-history" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Total Question Asked</p></a></h6>
             <h2 class="text-right"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span></h2>
             
           </div>

@@ -76,9 +76,11 @@
     
     <div class="row">
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"> <a href="admin-view-customer" style="text-decoration: none;color: black;">Total Registered User</a> </h6>
+        {% comment %} <div class="card bg-c-green order-card"> {% endcomment %}
+          <div>
+          {% comment %} <div class="card-block"> {% endcomment %}
+            <div>
+            <h6 class="m-b-20"> <a href="admin-view-customer" style="text-decoration: blink;color: black;"><p style="padding: 10px; border: 2px solid red;">Total registered users</p></a> </h6>
             <h2 class="text-right"><i  class="fas fa-users f-left"></i><span>{{total_user}}</span></h2>
             
           </div>
@@ -86,9 +88,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="admin-view-policy" style="text-decoration: none;color:black;">Listed Events</a> </h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="admin-view-event" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Listed Events</p></a> </h6>
             <h2 class="text-right"><i class="fab fa-product-hunt f-left"></i><span>{{total_policy}}</span></h2>
             
           </div>
@@ -96,9 +100,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="admin-view-category" style="text-decoration: none;color:black;">Listed Categories</a></h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="admin-view-category" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Listed Categories</p></a></h6>
            <h2 class="text-right"><i class="fas fa-list-alt f-left"></i><span>{{total_category}}</span></h2>
             
           </div>
@@ -106,9 +112,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="admin-question" style="text-decoration: none;color:black;">Total Question</a></h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="admin-question" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Total Question</p></a></h6>
             <h2 class="text-right"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span></h2>
             
           </div>
@@ -121,9 +129,11 @@
     <br>
     <div class="row">
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"> <a href="admin-view-policy-holder" style="text-decoration: none;color:black;">Total Applied Event </a> </h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"> <a href="admin-view-event-holder" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Total Applied Event </p></a> </h6>
             <h2 class="text-right"><i class="fas fa-user-cog f-left"></i><span>{{total_policy_holder}}</span></h2>
             
           </div>
@@ -131,9 +141,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="admin-view-approved-policy-holder" style="text-decoration: none;color:black;">Approved Event</a> </h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="admin-view-approved-event-holder" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Approved Event</p></a> </h6>
             <h2 class="text-right"><i class="fas fa-user-check f-left"></i><span>{{approved_policy_holder}}</span></h2>
             
           </div>
@@ -141,9 +153,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="admin-view-disapproved-policy-holder" style="text-decoration: none;color:black;">Disapproved Event</a></h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="admin-view-disapproved-event-holder" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Disapproved Event</p></a></h6>
            <h2 class="text-right"><i class="fas fa-user-times f-left"></i><span>{{disapproved_policy_holder}}</span></h2>
             
           </div>
@@ -151,9 +165,11 @@
       </div>
   
       <div class="col-md-4 col-xl-3">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20"><a href="admin-view-waiting-policy-holder" style="text-decoration: none;color:black;">Customer Waiting For Approval</a></h6>
+        {% comment %} <div class="card bg-c-green order-card">
+          <div class="card-block"> {% endcomment %}
+            <div>
+              <div>
+            <h6 class="m-b-20"><a href="admin-view-waiting-event-holder" style="text-decoration: none;color:black;"><p style="padding: 10px; border: 2px solid red;">Customer Waiting For Approval</p></a></h6>
             <h2 class="text-right"><i class="fas fa-user-clock f-left"></i><span>{{waiting_policy_holder}}</span></h2>
             
           </div>

@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'event',
     'customer',
+    
 ]
+ 
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,6 +80,8 @@ WSGI_APPLICATION = 'eventmanagement.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+
 # DATABASES = {  
 #     'default': {  
 #         'ENGINE': 'django.db.backends.mysql',  
@@ -89,21 +94,17 @@ WSGI_APPLICATION = 'eventmanagement.wsgi.application'
 #             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
 #         }  
 #     }  
-# }  
+# }
 
-DATABASES = {  
-    'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'project',  
-        'USER': 'root',  
-        'PASSWORD': 'bhumihar1',  
-        'HOST': '127.0.0.1',  
-        'PORT': '3306',  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-        }  
-    }  
-} 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
+
+  
+
 
 
 

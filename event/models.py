@@ -12,7 +12,8 @@ class Policy(models.Model):
     policy_name=models.CharField(max_length=200)
     sum_assurance=models.PositiveIntegerField()
     premium=models.PositiveIntegerField()
-    tenure=models.PositiveIntegerField()
+    roomtype=models.CharField(max_length=100,default='')
+    tenure=models.CharField(max_length=1000)
     creation_date =models.DateField(auto_now=True)
     def __str__(self):
         return self.policy_name

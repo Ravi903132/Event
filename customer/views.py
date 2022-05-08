@@ -53,10 +53,10 @@ def customer_dashboard_view(request):
     }
     return render(request,'customer/customer_dashboard.html',context=dict)
 
-def apply_policy_view(request):
+def apply_event_view(request):
     customer = models.Customer.objects.get(user_id=request.user.id)
     policies = CMODEL.Policy.objects.all()
-    return render(request,'customer/apply_policy.html',{'policies':policies,'customer':customer})
+    return render(request,'customer/apply_event.html',{'policies':policies,'customer':customer})
 
 def apply_view(request,pk):
     customer = models.Customer.objects.get(user_id=request.user.id)
